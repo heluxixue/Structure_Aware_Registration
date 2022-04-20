@@ -1,0 +1,74 @@
+{
+ "dataset": {
+  "dataset": "dirlab",
+  "root": "F:\\Code_git\\DataSet\\Dirlab4DCT",
+  "isResample": true,
+  "isCrop": true,
+  "offset": 0
+ },
+ "hyperparameter": {
+  "nlevel": 5,
+  "pyramid": [
+   [
+    16,
+    16,
+    16
+   ],
+   [
+    8,
+    8,
+    8
+   ],
+   [
+    4,
+    4,
+    4
+   ],
+   [
+    2,
+    2,
+    2
+   ]
+  ],
+  "surface_r_w": 0.01,
+  "spine_r_w": 0.001,
+  "other_r_w": 0.01,
+  "lung_w": 1.5,
+  "body_w": 0.03,
+  "bone_w": 0.03,
+  "niter": [
+   800,
+   800,
+   800,
+   100,
+   50
+  ],
+  "sigma": [
+   9,
+   9,
+   9
+  ],
+  "step_size": [
+   0.001,
+   0.001,
+   0.002,
+   0.003,
+   0.005,
+   0.005
+  ],
+  "global_r_w": 0.1
+ },
+ "method": {
+  "is_body_loss": true,
+  "is_bone_loss": true,
+  "is_lung_loss": true,
+  "is_global_loss": false,
+  "is_surface_reg": true,
+  "is_spine_reg": true,
+  "is_other_reg": true,
+  "is_global_reg": false,
+  "is_pTV": false,
+  "is_pSM": false,
+  "im_sim": "ngf"
+ }
+}
