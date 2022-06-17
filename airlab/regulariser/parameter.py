@@ -134,9 +134,9 @@ class MaskIsotropicTVRegulariser(_SpatialParameterRegulariser):
             #mask[mask>=0] = 1
             p = parameter*mask
             #if self._parameter_name == name:
-            dx = (parameter[:,:, 1:, 1:, 1:] - parameter[:,:, :-1, 1:, 1:]).pow(2)*1
-            dy = (parameter[:,:, 1:, 1:, 1:] - parameter[:,:, 1:, :-1, 1:]).pow(2)*1
-            dz = (parameter[:,:, 1:, 1:, 1:] - parameter[:,:, 1:, 1:, :-1]).pow(2)*1
+            dx = (p[:,:, 1:, 1:, 1:] - p[:,:, :-1, 1:, 1:]).pow(2)*1
+            dy = (p[:,:, 1:, 1:, 1:] - p[:,:, 1:, :-1, 1:]).pow(2)*1
+            dz = (p[:,:, 1:, 1:, 1:] - p[:,:, 1:, 1:, :-1]).pow(2)*1
 
             return dx + dy + dz
 
